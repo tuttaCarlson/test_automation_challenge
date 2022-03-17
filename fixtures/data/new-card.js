@@ -41,11 +41,11 @@ var emptyCity = {...validUser, city: ''};
 
 var emailWithoutAt = {...validUser, email: 'emailWithoutAt'};
 
-var emailWithoutDomain = {...validUser, email: 'emailWithoutDomain@'};
+var emailWithoutHost = {...validUser, email: 'emailWithoutDomain@'};
 
 var emailWithoutDot = {...validUser, email: 'emailWithoutDot@gmail'};
 
-var emailWithoutCountry = {...validUser, email: 'emailWithoutDot@gmail.'};
+var emailWithoutDomain = {...validUser, email: 'emailWithoutDot@gmail.'};
 
 var pinWithLetters = {...validUser, pin: 'ABCD'};
 
@@ -67,9 +67,9 @@ module.exports =
   emptyZipCode,
   emptyCity,
   emailWithoutAt,
-  emailWithoutDomain,
+  emailWithoutHost,
   emailWithoutDot,
-  emailWithoutCountry,
+  emailWithoutDomain,
   pinWithLetters,
   pinWithSpecialSymbols
 }

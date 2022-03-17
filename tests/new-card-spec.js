@@ -1,7 +1,7 @@
 const { browser } = require('protractor');
 const register = require('../pages/new-card');
 const page = require('../fixtures/pages/de-register-card');
-const data = require('../fixtures/data/new-card-data');
+const data = require('../fixtures/data/new-card');
 
 describe('Register a new card', function() {
     beforeAll(function() {
@@ -15,7 +15,7 @@ describe('Register a new card', function() {
     });
 
     it('should submit data for the new card', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.validUser);
         register.fillPersonalDataStep(data.validUser);
         //since the task asks not to submit - the test is stopped 
@@ -124,148 +124,148 @@ describe('Register a new card', function() {
 
     it('should have placeholder for the day in birthday', function() {
         expect(register.getDayOfBirthInput().getAttribute('placeholder'))
-            .toBe(page.day_placeholder.text, 'the placeholder for the day in birthday is not correct');
+            .toBe(page.placeholder.day, 'the placeholder for the day in birthday is not correct');
     });
     
     it('should have placeholder for the month in birthday', function() {
         expect(register.getMonthOfBirthInput().getAttribute('placeholder'))
-            .toBe(page.month_placeholder.text, 'the placeholder for the month in birthday is not correct');
+            .toBe(page.placeholder.month, 'the placeholder for the month in birthday is not correct');
     });
 
     it('should have placeholder for the year in birthday', function() {
         expect(register.getYearOfBirthInput().getAttribute('placeholder'))
-            .toBe(page.year_placeholder.text, 'the placeholder for the year in birthday is not correct');
+            .toBe(page.placeholder.year, 'the placeholder for the year in birthday is not correct');
     });
 
     it('should display error for empty email', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emptyEmail);
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.email_validation.error, 'email validation error is not correct');  
+            .toBe(page.error.email, 'email validation error is not correct');  
     });
 
     it('should display error for empty pin', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emptyPin);
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.pin_validation.error, 'pin validation error is not correct'); 
+            .toBe(page.error.pin, 'pin validation error is not correct'); 
     });
 
     it('should display error for empty first name', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emptyFirstName);
         register.fillPersonalDataStep(data.emptyFirstName);
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.firstName_validation.error, 'first name validation error is not correct');  
+            .toBe(page.error.firstName, 'first name validation error is not correct');  
     });
 
     it('should display error for empty last name', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emptyLastName);
         register.fillPersonalDataStep(data.emptyLastName);
         register.waitUntilElementIsPresent(register.getErrorMessage());
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.lastName_validation.error, 'last name validation error is not correct');  
+            .toBe(page.error.lastName, 'last name validation error is not correct');  
     });
 
     it('should display error for empty salutation', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emptySalutation);
         register.fillPersonalDataStep(data.emptySalutation);
         register.waitUntilElementIsPresent(register.getErrorMessage());
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.salutation_validation.error, 'salutation validation error is not correct');  
+            .toBe(page.error.salutation, 'salutation validation error is not correct');  
     });
 
     it('should display error for empty date in birthday', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emptyDayOfBirth);
         register.fillPersonalDataStep(data.emptyDayOfBirth);
         register.waitUntilElementIsPresent(register.getErrorMessage());
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.birthday_validation.error, 'birthday validation error is not correct'); 
+            .toBe(page.error.birthday, 'birthday validation error is not correct'); 
     });
 
     it('should display error for empty month in birthday', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emptyMonthOfBirth);
         register.fillPersonalDataStep(data.emptyMonthOfBirth);
         register.waitUntilElementIsPresent(register.getErrorMessage());
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.birthday_validation.error, 'birthday validation error is not correct'); 
+            .toBe(page.error.birthday, 'birthday validation error is not correct'); 
     });
 
     it('should display error for empty year in birthday', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emptyYearOfBirth);
         register.fillPersonalDataStep(data.emptyYearOfBirth);
         register.waitUntilElementIsPresent(register.getErrorMessage());
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.birthday_validation.error, 'birthday validation error is not correct'); 
+            .toBe(page.error.birthday, 'birthday validation error is not correct'); 
     });
 
     it('should display error for empty street', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emptyStreet);
         register.fillPersonalDataStep(data.emptyStreet);
         register.waitUntilElementIsPresent(register.getErrorMessage());
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.street_validation.error, 'street validation error is not correct');  
+            .toBe(page.error.street, 'street validation error is not correct');  
     });
 
     it('should display error for empty house number', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emptyHouseNumber);
         register.fillPersonalDataStep(data.emptyHouseNumber);
         register.waitUntilElementIsPresent(register.getErrorMessage());
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.houseNumber_validation.error, 'house number validation error is not correct');  
+            .toBe(page.error.houseNumber, 'house number validation error is not correct');  
     });
 
     it('should display error for empty zip code', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emptyZipCode);
         register.fillPersonalDataStep(data.emptyZipCode);
         register.waitUntilElementIsPresent(register.getErrorMessage());
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.zipCode_validation.error, 'zip code validation error is not correct');  
+            .toBe(page.error.zipCode, 'zip code validation error is not correct');  
     });
 
     it('should display error for empty city', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emptyCity);
         register.fillPersonalDataStep(data.emptyCity);
         register.waitUntilElementIsPresent(register.getErrorMessage());
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.city_validation.error, 'city validation error is not correct');  
+            .toBe(page.error.city, 'city validation error is not correct');  
     });
 
     it('should display error for email without @', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emailWithoutAt);
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.email_validation.error, 'email validation error is not correct');  
+            .toBe(page.error.email, 'email validation error is not correct');  
     });
 
-    it('should display error for email without domain', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
-        register.fillAccessDataStep(data.emailWithoutDomain);
+    it('should display error for email without host', function() {
+        register.fillSelectNewCardStep(page.card_id.DM);
+        register.fillAccessDataStep(data.emailWithoutHost);
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.email_validation.error, 'email validation error is not correct');  
+            .toBe(page.error.email, 'email validation error is not correct');  
     });
 
     it('should display error for email without dot', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.emailWithoutDot);
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.email_validation.error, 'email validation error is not correct');  
+            .toBe(page.error.email, 'email validation error is not correct');  
     });
 
-    it('should display error for email without country', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
-        register.fillAccessDataStep(data.emailWithoutCountry);
+    it('should display error for email without domain', function() {
+        register.fillSelectNewCardStep(page.card_id.DM);
+        register.fillAccessDataStep(data.emailWithoutDomain);
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.email_validation.error, 'email validation error is not correct');  
+            .toBe(page.error.email, 'email validation error is not correct');  
     });
 
     /* 
@@ -273,22 +273,24 @@ describe('Register a new card', function() {
     */
 
     it('should display error for pin with letters', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.pinWithLetters);
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.pin_validation.error, 'pin validation error is not correct'); 
+            .toBe(page.error.pin, 'pin validation error is not correct'); 
     });
 
     it('should display error for pin with special symbols', function() {
-        register.fillSelectNewCardStep(page.card_DM.id);
+        register.fillSelectNewCardStep(page.card_id.DM);
         register.fillAccessDataStep(data.pinWithSpecialSymbols);
         expect(register.getErrorMessage().getAttribute('innerText'))
-            .toBe(page.pin_validation.error, 'pin validation error is not correct'); 
+            .toBe(page.error.pin, 'pin validation error is not correct'); 
     });
 
     it('should display pin after clicking eye button', function() {
         //check that type = password by default for $$("input#pin")
         //type=text after clicking eye button
     });
+
+    /* TODO: add more tests on validation here */
    
 });
