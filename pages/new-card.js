@@ -18,9 +18,7 @@ var Register = function() {
   };
 
   this.clickNoCardRadioButton = async function() {
-    if (element(by.css('input#cardSectionVariant-cardPicker')).getAttribute('checked') != 'checked') {
       await this.getNoCardRadio().click();
-    }
   };
 
   this.getNewCard = function(cardId) {
