@@ -1,0 +1,60 @@
+{
+    "email_validation": {
+        "error": "Bitte geben Sie Ihre E-Mail-Adresse ein (inkl. @)"
+    },
+
+    "pin_validation": {
+        "error": "Bitte geben Sie einen 4-stelligen (0-9) PIN ein"
+    },
+
+    "firstName_validation": {
+        "error": "Bitte geben Sie Ihren Vornamen ein"
+    },
+
+    "lastName_validation": {
+        "error": "Bitte geben Sie Ihren Nachnamen ein"
+    },
+
+    "salutation_validation": {
+        "error": "Bitte wählen Sie eine Anrede aus"
+    },
+
+    "birthday_validation": {
+        "error": "Bitte geben Sie Ihr Geburtsdatum (TT/MM/JJJJ) ein"
+    },
+
+    "street_validation": {
+        "error": "Bitte geben Sie Ihre Straße ein"
+    },
+
+    "houseNumber_validation": {
+        "error": "Bitte geben Sie Ihre Hausnummer ein"
+    },
+
+    "zipCode_validation": {
+        "error": "Bitte geben Sie Ihre PLZ ein"
+    },
+
+    "city_validation": {
+        "error": "Bitte geben Sie Ihren Wohnort an"
+    },
+
+    "day_placeholder": {
+        "text": "TT"
+    },
+
+    "month_placeholder": {
+        "text": "MM"
+    },
+
+    "year_placeholder": {
+        "text": "JJJJ"
+    },
+
+    "card_DM": {
+        "id": "atDMWelcome"
+    },
+
+    "url": "/anmelden"
+
+}

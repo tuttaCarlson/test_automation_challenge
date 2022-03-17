@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "protractor": "^7.0.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.0.0-beta.0"
+  }
+}
