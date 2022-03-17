@@ -12,6 +12,33 @@
         "city": "Bitte geben Sie Ihren Wohnort an"
     },
 
+    "minlength": {
+        "email": "1",
+        "pin": "4",
+        "firstName": "1",
+        "lastName": "1",
+        "street": "1",
+        "houseNumber": "1",
+        "zipCode": "1",
+        "city": "1"
+    },
+
+    "maxlength": {
+        "email": "60",
+        "pin": "4",
+        "firstName": "50",
+        "lastName": "50",
+        "birthday": {
+            "day": "2",
+            "month": "2",
+            "year": "4"
+        },
+        "street": "40",
+        "houseNumber": "30",
+        "zipCode": "8",
+        "city": "40"
+    },
+
     "placeholder": {
         "day": "TT",
         "month": "MM",

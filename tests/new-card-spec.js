@@ -26,100 +26,100 @@ describe('Register a new card', function() {
     it('should submit data with maximum allowed length', function() {
         //generate the data with max allowed values for all fields and submit
     });
-    
-    it('should have minlength=1 for email', function() {
+
+    it('should have minlength for email', function() {
         expect(register.getEmailInput().getAttribute('minlength'))
-            .toBe('1', 'minlength of email <> 1');
+            .toBe(page.minlength.email, 'minlength of email is not as expected');
     });
 
-    it('should have maxlength = 60 for email', function() {
+    it('should have maxlength for email', function() {
         expect(register.getEmailInput().getAttribute('maxlength'))
-            .toBe('60', 'maxlength of email <> 60');
+            .toBe(page.maxlength.email, 'maxlength of email is not as expected');
     });
 
-    it('should have minlength = 4 for pin', function() {
+    it('should have minlength for pin', function() {
         expect(register.getPinInput().getAttribute('minlength'))
-            .toBe('4', 'minlength of pin <> 4');
+            .toBe(page.minlength.pin, 'minlength of pin is not as expected');
     });
    
-    it('should have maxlength = 4 for pin', function() {
+    it('should have maxlength for pin', function() {
         expect(register.getPinInput().getAttribute('maxlength'))
-            .toBe('4', 'maxlength of pin <> 4');
+            .toBe(page.maxlength.pin, 'maxlength of pin is not as expected');
     });
 
-    it('should have minlength = 2 for firstname', function() {
+    it('should have minlength for firstname', function() {
         expect(register.getFirstNameInput().getAttribute('minlength'))
-            .toBe('1', 'minlength of firstName <> 1');
+            .toBe(page.minlength.firstName, 'minlength of firstName is not as expected');
     });
 
-    it('should have maxlength = 50 for firstname', function() {
+    it('should have maxlength for firstname', function() {
         expect(register.getFirstNameInput().getAttribute('maxlength'))
-            .toBe('50', 'maxlength of firstName <> 50');
+            .toBe(page.maxlength.firstName, 'maxlength of firstName is not as expected');
     });
 
-    it('should have minlength = 1 for lastname', function() {
+    it('should have minlength for lastname', function() {
         expect(register.getLastNameInput().getAttribute('minlength'))
-            .toBe('1', 'maxlength of lastName <> 1');
+            .toBe(page.minlength.lastName, 'maxlength of lastName is not as expected');
     });
 
-    it('should have maxlength = 50 for lastname', function() {
+    it('should have maxlength for lastname', function() {
         expect(register.getLastNameInput().getAttribute('maxlength'))
-            .toBe('50', 'maxlength of lastName <> 50');
+            .toBe(page.maxlength.lastName, 'maxlength of lastName is not as expected');
     });
 
-    it('should have maxlength = 2 for day in birthday', function() {
+    it('should have maxlength for day in birthday', function() {
         expect(register.getDayOfBirthInput().getAttribute('maxlength'))
-            .toBe('2', 'maxlength of day in birthday <> 2');
+            .toBe(page.maxlength.birthday.day, 'maxlength of day in birthday is not as expected');
     });
 
-    it('should have maxlength = 2 for month in birthday', function() {
+    it('should have maxlength for month in birthday', function() {
         expect(register.getMonthOfBirthInput().getAttribute('maxlength'))
-            .toBe('2', 'maxlength of month in birthday <> 2');
+            .toBe(page.maxlength.birthday.month, 'maxlength of month in birthday is not as expected');
     });
 
-    it('should have maxlength = 4 for year in birthday', function() {
+    it('should have maxlength for year in birthday', function() {
         expect(register.getYearOfBirthInput().getAttribute('maxlength'))
-            .toBe('4', 'maxlength of year in birthday <> 4');
+            .toBe(page.maxlength.birthday.year, 'maxlength of year in birthday is not as expected');
     });
 
-    it('should have minlength = 1 for street', function() {
+    it('should have minlength for street', function() {
         expect(register.getStreetInput().getAttribute('minlength'))
-            .toBe('1', 'minlength of street <> 1');
+            .toBe(page.minlength.street, 'minlength of street is not as expected');
     });
 
-    it('should have maxlength = 40 for street', function() {
+    it('should have maxlength for street', function() {
         expect(register.getStreetInput().getAttribute('maxlength'))
-            .toBe('40', 'minlength of street <> 40');
+            .toBe(page.maxlength.street, 'maxlength of street is not as expected');
     });
 
-    it('should have minlength = 1 for house number', function() {
+    it('should have minlength for house number', function() {
         expect(register.getHouseNumberInput().getAttribute('minlength'))
-            .toBe('1', 'minlength of house number <> 1');
+            .toBe(page.minlength.houseNumber, 'minlength of house number is not as expected');
     });
 
-    it('should have maxlength = 30 for house number', function() {
+    it('should have maxlength for house number', function() {
         expect(register.getHouseNumberInput().getAttribute('maxlength'))
-            .toBe('30', 'maxlength of house number <> 30');
+            .toBe(page.maxlength.houseNumber, 'maxlength of house number is not as expected');
     });
 
-    it('should have minlength = 1 for zip code', function() {
+    it('should have minlength for zip code', function() {
         expect(register.getZipCodeInput().getAttribute('minlength'))
-            .toBe('1', 'minlength of zip code <> 1');
+            .toBe(page.minlength.zipCode, 'minlength of zip code is not as expected');
     });
 
-    it('should have maxlength = 8 for zip code', function() {
+    it('should have maxlength for zip code', function() {
         expect(register.getZipCodeInput().getAttribute('maxlength'))
-            .toBe('8', 'maxlength of house number <> 8');
+            .toBe(page.maxlength.zipCode, 'maxlength of zipCode is not as expected');
     });
 
-    it('should have minlength = 1 for city', function() {
+    it('should have minlength for city', function() {
         expect(register.getCityInput().getAttribute('minlength'))
-            .toBe('1', 'minlength of city <> 1');
+            .toBe(page.minlength.city, 'minlength of city is not as expected');
     });
 
-    it('should have maxlength = 40 for city', function() {
+    it('should have maxlength for city', function() {
         expect(register.getCityInput().getAttribute('maxlength'))
-            .toBe('40', 'maxlength of city <> 40');
+            .toBe(page.maxlength.city, 'maxlength of city is not as expected');
     });
 
     it('should have placeholder for the day in birthday', function() {
